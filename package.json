@@ -18,5 +18,14 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^4.4.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ismoo/vocab-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ismoo/vocab-app/issues"
+  },
+  "homepage": "https://github.com/ismoo/vocab-app#readme"
 }
