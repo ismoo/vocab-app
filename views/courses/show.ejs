@@ -7,8 +7,8 @@
         <div class="col-md-8 well">
             <% currentUser.userProgress.forEach(function (el){ %>
                 <div>
-                    <h2><%= el.list.name %></h2>
-                    <p><%= el.list.description %></p>
+                    <h2><%= el.name %></h2>
+                    <p><%= el.description %></p>
                 </div>
                 <hr>
             <% }); %>
