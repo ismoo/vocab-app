@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 
 //stores vocab list, plus information for displaying them
 
-var VocabListSchema = new mongoose.Schema({
+var CourseSchema = new mongoose.Schema({
     name: String,
     description: String,
     image: String,
@@ -12,4 +12,4 @@ var VocabListSchema = new mongoose.Schema({
     }]
 });
 
-module.exports = mongoose.model("VocabList", VocabListSchema);
+module.exports = mongoose.model("Course", CourseSchema);

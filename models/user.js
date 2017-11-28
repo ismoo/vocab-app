@@ -4,7 +4,7 @@ var passportLocalMongoose = require("passport-local-mongoose");
 var UserSchema = new mongoose.Schema({
     username: String,
     password: String,
-    userProgress: [{type: mongoose.Schema.Types.ObjectId, ref: "VocabProgress"}]
+    userProgress: [{type: mongoose.Schema.Types.ObjectId, ref: "CourseProgress"}]
 });
 
 UserSchema.plugin(passportLocalMongoose);
