@@ -6,9 +6,17 @@
         <div class="col-md-3"></div>
         <div class="col-md-8 well">
             <% courses.forEach(function (el){ %>
-                <div>
-                    <h2><%= el.name %></h2>
-                    <p><%= el.description %></p>
+                <div class="media jumbotron">
+                    <div class="media-left">
+                        <img src="<%= el.image %>" style="width:60px">
+                    </div>
+                    <div class="media-body">
+                        <div class="media-heading">
+                            <h2><%= el.name %></h2>
+                        </div>
+                        <p><%= el.description %></p>
+                    </div>
+
                 </div>
                 <hr>
             <% }); %>
