@@ -6,6 +6,9 @@ var express       = require("express"),
     LocalStrategy = require("passport-local"),
     methodOverride = require("method-override");
     
+var seed = require("./seed");
+//seed();
+
 var User = require("./models/user");
     
 var courseRoutes = require("./routes/courses"),

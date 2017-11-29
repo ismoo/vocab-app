@@ -8,7 +8,8 @@ var CourseSchema = new mongoose.Schema({
     image: String,
     wordList: [{
         word: String,
-        translation: String
+        translation: String,
+        frequency: Number
     }]
 });
 
