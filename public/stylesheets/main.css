@@ -1,38 +1,8 @@
 body{
-    background-color: #cda34f;
-    font-family: 'Playfair Display', serif;
+    background-color: #0E103D;
+    font-family: 'Enriqueta', serif;
 }
 
-.navbar-default {
-    background-color: #373f27;
-    border-width: 0px;
-    height: 70px;
-    -webkit-box-shadow: 0px 5px 18px 5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 5px 18px 5px rgba(0,0,0,0.75);
-    box-shadow: 0px 5px 18px 5px rgba(0,0,0,0.75);
-}
-
-.navbar-default .navbar-brand {
-    padding-top: 20px;
-    color: #e9e7da;
-    font-size: 50px;
-}
-
-.well{
-    background-color: #636b46;
-    border: 1;
-    -webkit-box-shadow: 5px 5px 24px 3px rgba(0,0,0,0.75);
-    -moz-box-shadow: 5px 5px 24px 3px rgba(0,0,0,0.75);
-    box-shadow: 5px 5px 24px 3px rgba(0,0,0,0.75);
-}
-
-h1{
-    color: #e9e7da;
-    font-size: 40px;
-    text-align: center;
-    font-weight: 600;
-    text-shadow: 2px 2px 4px rgba(150, 150, 150, 1);
-}
 
 form{
     text-align: center;
@@ -42,4 +12,63 @@ input{
     width: 50%;
     padding: 10px;
     margin-bottom: 20px;
+}
+
+
+h1{
+    color: #F2D7EE;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+/*========TRANSPARENT HEADERS=========*/
+
+.transHeader{
+    background-color: rgba(50, 50, 50, 0.6);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 50px;
+}
+
+.transHeader p{
+    color: #D3BCC0;
+    font-size: 20px;
+    padding: 0px 200px;
+}
+
+/*==========NAVBAR STYLES=========*/
+
+.navbar-default {
+    background-color: #69306D;
+    border-width: 0px;
+    border-bottom-right-radius: 100px;
+    height: 90px;
+    -webkit-box-shadow: 0px 5px 18px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 18px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 18px 5px rgba(0,0,0,0.75);
+}
+
+.navbar-default .navbar-brand {
+    padding-top: 40px;
+    color: #D3BCC0;
+    font-size: 50px;
+    letter-spacing: 4px;
+}
+
+.navbar-default .navbar-nav {
+    padding: 20px 100px;
+    color: #D3BCC0;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.well{
+    background-color: #636b46;
+    border: 1;
+    -webkit-box-shadow: 5px 5px 24px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 24px 3px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 24px 3px rgba(0,0,0,0.75);
 }
