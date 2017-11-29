@@ -5,13 +5,18 @@ var Course = require("../models/course");
 
 //Shows list of courses
 router.get("/", isLoggedIn, function(req, res){
-    res.render("courses/show")
+    res.render("courses/show");
 });
 
 //Add course form
 router.get("/new", isLoggedIn, function(req, res){
     Course.find({}, function(err, courses){
-        
+        if(err){
+            console.log(err);
+        }
+        else {
+            res.render("courses/new", {courses: courses});
+        }
     });
 });
 
@@ -24,7 +29,7 @@ function isLoggedIn(req, res, next){
     if(req.isAuthenticated()){
         return next();
     }
-    res.redirect("/register");
+    res.redirect("/login");
 }
 
 module.exports = router;

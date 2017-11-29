@@ -1,12 +1,14 @@
-<% include ./partials/header %>
+<% include ../partials/header %>
 
 <h1>Add Course</h1>
 
 <form action="/courses" method="POST">
     <select name="courseSelection">
-        <% 
+        <% courses.forEach(function (el) { %>
+            <option value="<%= el.name %>"> <%= el.name %> </option>
+        <% }); %>
     </select>
     <button>Sign Up</button>
 </form>
 
-<% include ./partials/footer %>
+<% include ../partials/footer %>
