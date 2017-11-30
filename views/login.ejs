@@ -1,8 +1,10 @@
 <% include ./partials/header %>
+<link rel="stylesheet" href="/stylesheets/login.css">
 
 <div class="container">
-<h1>Login</h1>
-    <div class="well">
+    <div class="transHeader">
+        <h1>Login</h1>
+
         <form action="/login" method="POST">
             <div class="form-group">
                 <input type="text" name="username" placeholder="Username">
@@ -13,7 +15,6 @@
             <button class="btn btn-default">Sign Up</button>
         </form>
     </div>
-
 </div>
 
 <% include ./partials/footer %>

@@ -1,5 +1,6 @@
 body{
     background-color: #0E103D;
+    background-image: url("../images/texture_axiom.png");
     font-family: 'Enriqueta', serif;
 }
 
@@ -26,7 +27,7 @@ h1{
 /*========TRANSPARENT HEADERS=========*/
 
 .transHeader{
-    background-color: rgba(50, 50, 50, 0.6);
+    background-color: rgba(50, 50, 50, 0.8);
     border-radius: 20px;
     padding: 20px;
     margin: 50px;
@@ -57,7 +58,7 @@ h1{
     letter-spacing: 4px;
 }
 
-.navbar-default .navbar-nav {
+.navbar-default .navbar-right {
     padding: 20px 100px;
     color: #D3BCC0;
     font-size: 20px;
@@ -65,10 +66,10 @@ h1{
     letter-spacing: 2px;
 }
 
-.well{
-    background-color: #636b46;
-    border: 1;
-    -webkit-box-shadow: 5px 5px 24px 3px rgba(0,0,0,0.75);
-    -moz-box-shadow: 5px 5px 24px 3px rgba(0,0,0,0.75);
-    box-shadow: 5px 5px 24px 3px rgba(0,0,0,0.75);
+.navbar-default .navbar-left {
+    padding: 30px 50px;
+    color: #D3BCC0;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
