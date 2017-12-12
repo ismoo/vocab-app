@@ -5,7 +5,7 @@
 <form action="/courses" method="POST">
     <select name="courseSelection">
         <% courses.forEach(function (el) { %>
-            <option value="<%= el.name %>"> <%= el.name %> </option>
+            <option value="<%= el._id %>"> <%= el.name %> </option>
         <% }); %>
     </select>
     <button>Sign Up</button>
