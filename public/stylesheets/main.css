@@ -24,14 +24,31 @@ h1{
     letter-spacing: 2px;
 }
 
+li .btn-primary{
+    font-size: 25px;
+    margin: 10px;
+}
+
+li .btn-secondary{
+    font-size: 20px;
+    margin: 10px;
+
+}
+
+.btn-danger{
+    font-size: 20px;
+    margin: 10px;
+}
+
 /*========TRANSPARENT HEADERS=========*/
 
 .transHeader{
     background-color: rgba(50, 50, 50, 0.8);
     border-radius: 20px;
     padding: 20px;
-    margin: 50px;
+    margin: 30px 50px;
 }
+
 
 .transHeader p{
     color: #FFFFFF;
