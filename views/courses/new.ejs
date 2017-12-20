@@ -1,14 +1,24 @@
 <% include ../partials/header %>
 
-<h1>Add Course</h1>
+<div class="container">
+    <h1>Add Course</h1>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <form action="/courses" method="POST">
+                <select multiple name="courseSelection" class="form-control">
+                    <% courses.forEach(function (el) { %>
+                        <option value="<%= el._id %>"> <%= el.name %> </option>
+                    <% }); %>
+                </select>
+                
+                <button class = "btn btn-primary">Sign Up</button>
+            </form>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
 
-<form action="/courses" method="POST">
-    <select name="courseSelection">
-        <% courses.forEach(function (el) { %>
-            <option value="<%= el._id %>"> <%= el.name %> </option>
-        <% }); %>
-    </select>
-    <button>Sign Up</button>
-</form>
+
 
 <% include ../partials/footer %>

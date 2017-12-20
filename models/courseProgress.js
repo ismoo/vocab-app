@@ -4,6 +4,7 @@ var mongoose = require("mongoose");
 
 var CourseProgressSchema = new mongoose.Schema({
     course: {type: mongoose.Schema.Types.ObjectId, ref: "Course"},
+    user: {type: mongoose.Schema.Types.ObjectId, ref: "User"},
     progress: [{
         attempts: Number,
         accuracy: Number

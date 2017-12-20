@@ -1,10 +1,32 @@
+var Course = require("../models/course");
+var CourseProgress = require("../models/courseProgress");
+
 var middleWareObj = {};
 
 middleWareObj.isLoggedIn = function isLoggedIn(req, res, next){
     if(req.isAuthenticated()){
         return next();
+    } else{
+        res.redirect("/register");
     }
-    res.redirect("/login");
+};
+
+middleWareObj.checkPermission = function(req, res, next){
+    if(req.isAuthenticated()){
+        CourseProgress.findById(req.params.id, function(err, foundProg){
+           if(err){
+               console.log(err);
+           } else{
+               if(foundProg.user.equals(req.user._id)) {
+                   return next();
+               } else{
+                   res.redirect("back");
+               }
+           }
+        });
+    } else {
+        res.redirect("back");
+    }
 };
 
 module.exports = middleWareObj;
