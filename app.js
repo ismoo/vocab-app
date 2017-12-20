@@ -15,7 +15,8 @@ var courseRoutes = require("./routes/courses"),
     indexRoutes = require("./routes/index"),
     devtoolsRoutes = require("./routes/devtools");
     
-mongoose.connect("mongodb://localhost/vocab_app");
+//mongoose.connect("mongodb://localhost/vocab_app");
+mongoose.connect("mongodb://maindev:clsb@ds161316.mlab.com:61316/vocab-app-db");
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
