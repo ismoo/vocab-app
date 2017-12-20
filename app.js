@@ -12,7 +12,8 @@ var seed = require("./seed");
 var User = require("./models/user");
     
 var courseRoutes = require("./routes/courses"),
-    indexRoutes = require("./routes/index");
+    indexRoutes = require("./routes/index"),
+    devtoolsRoutes = require("./routes/devtools");
     
 mongoose.connect("mongodb://localhost/vocab_app");
 
@@ -42,6 +43,7 @@ app.use(function(req, res, next){
 
 app.use("/", indexRoutes);
 app.use("/courses", courseRoutes);
+app.use("/devtools", devtoolsRoutes);
     
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("Vocab app launched");

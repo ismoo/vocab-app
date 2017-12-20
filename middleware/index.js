@@ -29,4 +29,16 @@ middleWareObj.checkPermission = function(req, res, next){
     }
 };
 
+middleWareObj.isDev = function(req, res, next){
+    if(req.isAuthenticated()){
+        if (req.user.username == "admin"){
+            return next();
+        } else{
+            res.redirect("back");
+        }
+    } else {
+        res.redirect("back");
+    }
+}
+
 module.exports = middleWareObj;

@@ -30,19 +30,6 @@ var testCourse3 = {name: "Greek GSCE",
                   wordList: testWordList
 };
 
-function addCourse(userAdd, courseAdd){
-    CourseProgress.create({
-        course: courseAdd,
-        progress: []
-    }, function(err, courseProgress) {
-        if (err){
-            console.log(err);
-        } else {
-            //userAdd.userProgress.push(courseProgress);
-            userAdd.save();
-        }
-    });
-}
 
 function addData(){
     var testCourses = [testCourse, testCourse2, testCourse3];

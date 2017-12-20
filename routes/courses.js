@@ -92,8 +92,8 @@ router.get("/:id", middleware.checkPermission, function(req, res){
                 if(err){
                     console.log(err);
                 } else{
-                    var wordObj = pickWord(progress, course);
-                    res.render("courses/learn", {word: wordObj.word, num: wordObj.num, courseName: course.name, id:progress.id});
+                    var wordNum = pickWord(progress, course);
+                    res.render("courses/learn", {word: course.wordList[wordNum], num: wordNum, courseName: course.name, id:progress.id});
                 }
             });
         }
@@ -145,7 +145,13 @@ function addCourse(userAdd, courseAdd){
 }
 
 function pickWord(courseProgress, course){
-    return {word: course.wordList[0], num: 0};
+    var a = -1;
+    if (courseProgress.progress.length < course.wordList.length)
+        a = courseProgress.progress.length;
+    else
+        a = Math.floor(Math.random() * course.wordList.length);
+    return a;
+    
 }
 
 function updateProgress(courseProgress, word, pass){
