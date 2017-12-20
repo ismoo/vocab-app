@@ -44,6 +44,11 @@ select{
     margin: 10px;
 }
 
+.btn-info{
+    font-size: 30px;
+    padding: 20px 10px;
+}
+
 /*========TRANSPARENT HEADERS=========*/
 
 .transHeader{
