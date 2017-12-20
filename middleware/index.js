@@ -7,6 +7,7 @@ middleWareObj.isLoggedIn = function isLoggedIn(req, res, next){
     if(req.isAuthenticated()){
         return next();
     } else{
+        req.flash("error", "Please sign up or login first!")
         res.redirect("/register");
     }
 };
@@ -15,16 +16,19 @@ middleWareObj.checkPermission = function(req, res, next){
     if(req.isAuthenticated()){
         CourseProgress.findById(req.params.id, function(err, foundProg){
            if(err){
-               console.log(err);
+               req.flash("error", "Error: course progress not found");
+               res.redirect("back");
            } else{
                if(foundProg.user.equals(req.user._id)) {
                    return next();
                } else{
+                   req.flash("error", "You don't have permission to do that");
                    res.redirect("back");
                }
            }
         });
     } else {
+        req.flash("error", "Please sign up or login first!")
         res.redirect("back");
     }
 };

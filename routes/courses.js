@@ -80,6 +80,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
                 console.log(err);
             } else {
                 addCourse(req.user, course);
+                req.flash("success", "Successfully signed up!");
                 res.redirect("/courses");   
             }
     });
@@ -129,6 +130,7 @@ router.delete("/:id", middleware.checkPermission, function(req, res){
         if(err){
             console.log(err);
         }
+        req.flash("success", "You are no longer signed up this course");
         res.redirect("/courses");
     });
 });

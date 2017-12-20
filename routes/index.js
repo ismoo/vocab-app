@@ -19,11 +19,12 @@ router.post("/register", function(req, res){
     var newUser = new User({username: req.body.username});
     User.register(newUser, req.body.password, function(err, user){
         if(err){
-            console.log(err);
-            return res.render("register");
+            req.flash("error", err.message);
+            return res.redirect("/register");
         }
         passport.authenticate("local")(req, res, function(){
-            res.redirect("/courses");
+            req.flash("success", "Signed up! Welcome to VocabApp");
+            return res.redirect("/courses");
         });
     });
 });
@@ -37,13 +38,15 @@ router.get("/login", function(req, res) {
 router.post("/login", passport.authenticate("local",
     {
         successRedirect: "/courses",
-        failureRedirect: "/login"
+        failureRedirect: "/login",
+        failureFlash: true
     }), function(req, res) {
 });
 
 
 //Logout user
 router.get("/logout", function(req, res){
+    req.flash("success", "You have been logged out");
     req.logout();
     res.redirect("/");
 });
