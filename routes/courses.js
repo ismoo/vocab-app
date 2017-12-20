@@ -72,14 +72,18 @@ router.get("/new", middleware.isLoggedIn, function(req, res){
 
 //Add course
 router.post("/", middleware.isLoggedIn, function(req, res){
-    Course.findById(req.body.courseSelection, function(err, course){
-        if (err){
-            console.log(err);
-        } else {
-            addCourse(req.user, course);
-            res.redirect("/courses");   
-        }
+    if (req.body.courseSelection === undefined){
+        res.redirect("/courses");
+    } else{
+        Course.findById(req.body.courseSelection, function(err, course){
+            if (err){
+                console.log(err);
+            } else {
+                addCourse(req.user, course);
+                res.redirect("/courses");   
+            }
     });
+    }
 });
 
 //Vocab learning page

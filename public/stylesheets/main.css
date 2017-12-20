@@ -132,6 +132,9 @@ select{
     color: #BFC0C0;
 }
 
+.icon-bar{
+    margin: 10px;
+}
 
 @media (max-width: 991px) {
   .navbar-header {
