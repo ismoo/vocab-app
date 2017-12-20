@@ -80,7 +80,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
                 console.log(err);
             } else {
                 addCourse(req.user, course);
-                req.flash("success", "Successfully signed up!");
+                req.flash("success", "Successfully signed up for this course!");
                 res.redirect("/courses");   
             }
     });
